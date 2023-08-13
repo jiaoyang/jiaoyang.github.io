@@ -1,0 +1,274 @@
+* {margin:0;padding:0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+/* ============== Reset css styles ==================== */
+
+
+
+body {
+    font:15px/26px 'Open Sans', Verdana, sans-serif;
+    color:#333333;
+    font-weight:400;
+    /*background: #ffffff url('image/background.jpg') top center repeat fixed;*/
+}
+
+
+a {
+    color:#008ce5;
+    text-decoration:none;
+}
+
+
+h1 {
+    font-weight:400;
+    line-height:30px;
+}
+h2 {
+	/*font-family:'Akronim'; */
+	font-size:22px;
+	margin: 0 0 15px 0;
+    /*font-weight:550;
+    font-style:italic;
+    text-transform:uppercase;*/
+}
+h3 {
+    font-weight:bold;
+    margin: 5 0 5px 0;
+}
+
+
+
+p {
+    margin:0 0 15px 0;
+}
+img {
+    max-width:100%;
+}
+
+ul {
+	 margin: 0 0 15px 0;
+}
+
+
+/*
+}
+*/
+/* Main styles ========================= */
+
+
+
+
+#mainwrap { 
+  position:relative;
+  width:90%;
+  margin:0 auto;
+  text-align:left;}
+
+
+
+.wrap{
+  position:relative;
+  width:800px;
+  margin:70px auto;
+  text-align:left;}
+  
+  
+
+
+
+header {
+	background-color:#ffffff;
+	color:#333333;
+	z-index:1000;
+	
+    position:fixed;
+    top:0;
+    height:50px;
+	width: 100%;
+    box-shadow: 0px 0px 3px #000;
+        -moz-box-shadow: 0px 0px 3px #000;
+        -webkit-box-shadow: 0px 0px 3px #000;
+}
+
+
+.headwrap{
+
+ margin: 0% 10% 0% 10%;
+ /*background-color: green;*/
+}
+
+
+.myname{
+	float:left;
+	text-align:center;
+	width: 20%;	
+	margin: 0;
+	line-height: 40px;
+	font-style:oblique;
+	font-size:150%;
+	/*background-color:red;*/
+}
+
+
+/* Define the navigation bar ================ */
+
+nav ul {
+	list-style-type:none;
+	margin:5px 0px 0px 0px;
+    text-align:center;
+    font-size:15px;
+    /*background-color:black;*/
+}
+
+
+nav ul li {
+	display:inline-block;
+	width:15%;
+	padding:0px;
+	background-color:#008ce5;
+	
+}
+
+
+nav ul li.dark {
+	display:inline-block;
+	width:15%;
+	padding:0px;
+	background-color: #0062a0;
+	/*#008ce5;
+	#007ece
+	#0070b7
+	#0062a0
+	#005489;*/
+}
+
+
+
+
+nav ul li a {
+    display:block;
+    text-decoration:none;
+    line-height:38px;
+    border-bottom:2px solid transparent;
+    text-align:center;
+    color:white;
+}
+
+/*
+nav ul li.active a,
+*/
+
+nav ul li a:hover {
+    background-color:#0062a0;
+}
+
+
+
+
+/* Define the research page list style ============*/
+
+ul.inside 
+{
+list-style-position: outside
+}
+
+
+/* Pop-up text */ 
+
+ul.inside  li a.article{
+  position: relative; /* This makes everything work.*/
+  /* Allows you to layer overlapping elements. */
+  z-index: 20; 
+  color: black;  
+  font-style: italic;
+  text-decoration: none
+}
+  
+ul.inside  li a.article:hover{
+  /* Allows you to layer overlapping elements. */
+  color: #008ce5; 
+  z-index: 30; 
+}
+
+ul.inside  li a.article span.abstract{
+  display: none
+}
+
+/* This will only display itself when the
+ * user hovers the mouse over the anchor. */
+ul.inside  li a.article:hover span.abstract{ 
+  display: block;
+  position: absolute;
+  font-size: 16px;
+  
+  /* This sets the height of a line of text in the box. */
+  line-height: 28px;
+
+  
+  /* These position the box where it needs to go. */
+  top: 26px; 
+  left: 0px; 
+  
+  /* These adjust the size of the box when it appears. */
+  width: 600px;
+  padding: 10px;
+  
+  border: 1px solid #666666;
+  background-color: #BFE2F8; 
+  
+  /* text color */
+  color: #000000;
+  text-align: left;
+  
+ 
+}
+
+
+
+
+ol {margin-top: -1em; margin-left: 0px; padding-left: 20px;}
+
+/* Content area */
+#content {background:#fff; float:left; text-align:left; padding:0; margin:15px 0px 0px 0;  width:60%;}
+
+  
+#box{
+  background:#fff; float:left; text-align:left; padding:0; margin:15px 0px 0px 0;;
+}
+
+#smallbox{
+  background:#fff; float:left; text-align:left; padding:0; margin:8px 0px 0px 0;;
+}
+
+/* Sidebar */
+#sidebar {width:36%; float:right; margin:0; padding:0; margin:50px 0px 0px 0;  color:#555;}
+
+
+
+
+
+@media screen and (max-width:900px) {
+  .mainwrap {
+    width:100%;
+  }
+  
+  .wrap{
+  	width:85%;
+  }
+  
+  .headwrap{
+  	width: 100%;
+  }
+
+}
+
+@media screen and (max-width:479px) {
+  .section {
+    padding:15px;
+  }
+
+  .column {
+    margin-left:0 0%;
+    padding:0 0%;
+    float:none;
+  }
+
+
