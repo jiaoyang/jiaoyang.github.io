@@ -1,274 +1,130 @@
-* {margin:0;padding:0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
-/* ============== Reset css styles ==================== */
-
-
-
+/* Original blue-and-white design, with typography and responsive layout refinements. */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
 body {
-    font:15px/26px 'Open Sans', Verdana, sans-serif;
-    color:#333333;
-    font-weight:400;
-    /*background: #ffffff url('image/background.jpg') top center repeat fixed;*/
+  background: #ffffff;
+  color: #333333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Open Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 400;
 }
-
-
-a {
-    color:#008ce5;
-    text-decoration:none;
-}
-
-
-h1 {
-    font-weight:400;
-    line-height:30px;
-}
-h2 {
-	/*font-family:'Akronim'; */
-	font-size:22px;
-	margin: 0 0 15px 0;
-    /*font-weight:550;
-    font-style:italic;
-    text-transform:uppercase;*/
-}
-h3 {
-    font-weight:bold;
-    margin: 5 0 5px 0;
-}
-
-
-
-p {
-    margin:0 0 15px 0;
-}
-img {
-    max-width:100%;
-}
-
-ul {
-	 margin: 0 0 15px 0;
-}
-
-
-/*
-}
-*/
-/* Main styles ========================= */
-
-
-
-
-#mainwrap { 
-  position:relative;
-  width:90%;
-  margin:0 auto;
-  text-align:left;}
-
-
-
-.wrap{
-  position:relative;
-  width:800px;
-  margin:70px auto;
-  text-align:left;}
-  
-  
-
-
-
+a { color: #008ce5; text-decoration: none; overflow-wrap: anywhere; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid #0062a0; outline-offset: 3px; }
+h1 { font-size: 30px; font-weight: 400; line-height: 1.25; }
+h2 { font-size: 24px; line-height: 1.3; font-weight: 600; margin-bottom: 16px; }
+h3 { font-size: 19px; line-height: 1.4; font-weight: 600; margin: 0 0 12px; }
+p { margin: 0 0 17px; }
+img { max-width: 100%; height: auto; display: block; }
+ul, ol { margin: 0 0 20px; padding-left: 22px; }
+li { padding-left: 1px; }
+li + li { margin-top: 7px; }
+sub { font-size: .75em; }
+.wrap { width: min(800px, calc(100% - 48px)); margin: 82px auto 48px; text-align: left; }
 header {
-	background-color:#ffffff;
-	color:#333333;
-	z-index:1000;
-	
-    position:fixed;
-    top:0;
-    height:50px;
-	width: 100%;
-    box-shadow: 0px 0px 3px #000;
-        -moz-box-shadow: 0px 0px 3px #000;
-        -webkit-box-shadow: 0px 0px 3px #000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 1000;
+  background: #ffffff;
+  color: #333333;
+  box-shadow: 0 0 3px #000000;
 }
-
-
-.headwrap{
-
- margin: 0% 10% 0% 10%;
- /*background-color: green;*/
+.headwrap {
+  width: 80%;
+  margin: 0 auto;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
-
-
-.myname{
-	float:left;
-	text-align:center;
-	width: 20%;	
-	margin: 0;
-	line-height: 40px;
-	font-style:oblique;
-	font-size:150%;
-	/*background-color:red;*/
-}
-
-
-/* Define the navigation bar ================ */
-
-nav ul {
-	list-style-type:none;
-	margin:5px 0px 0px 0px;
-    text-align:center;
-    font-size:15px;
-    /*background-color:black;*/
-}
-
-
-nav ul li {
-	display:inline-block;
-	width:15%;
-	padding:0px;
-	background-color:#008ce5;
-	
-}
-
-
-nav ul li.dark {
-	display:inline-block;
-	width:15%;
-	padding:0px;
-	background-color: #0062a0;
-	/*#008ce5;
-	#007ece
-	#0070b7
-	#0062a0
-	#005489;*/
-}
-
-
-
-
-nav ul li a {
-    display:block;
-    text-decoration:none;
-    line-height:38px;
-    border-bottom:2px solid transparent;
-    text-align:center;
-    color:white;
-}
-
-/*
-nav ul li.active a,
-*/
-
-nav ul li a:hover {
-    background-color:#0062a0;
-}
-
-
-
-
-/* Define the research page list style ============*/
-
-ul.inside 
-{
-list-style-position: outside
-}
-
-
-/* Pop-up text */ 
-
-ul.inside  li a.article{
-  position: relative; /* This makes everything work.*/
-  /* Allows you to layer overlapping elements. */
-  z-index: 20; 
-  color: black;  
-  font-style: italic;
-  text-decoration: none
-}
-  
-ul.inside  li a.article:hover{
-  /* Allows you to layer overlapping elements. */
-  color: #008ce5; 
-  z-index: 30; 
-}
-
-ul.inside  li a.article span.abstract{
-  display: none
-}
-
-/* This will only display itself when the
- * user hovers the mouse over the anchor. */
-ul.inside  li a.article:hover span.abstract{ 
+.myname { flex: 0 0 auto; min-width: 165px; text-align: center; font-size: 22px; line-height: 40px; font-style: oblique; }
+.myname a { white-space: nowrap; text-decoration: none; }
+nav { min-width: 0; flex: 1 1 auto; }
+nav ul { display: flex; justify-content: center; gap: 5px; list-style: none; padding: 0; margin: 0; font-size: 15px; }
+nav ul li, nav ul li.dark { flex: 0 1 145px; min-width: 0; padding: 0; margin: 0; background: #008ce5; }
+nav ul li.dark { background: #0062a0; }
+nav ul li a { display: block; padding: 0 8px; color: #ffffff; text-align: center; line-height: 38px; border-bottom: 2px solid transparent; text-decoration: none; overflow-wrap: normal; }
+nav ul li a:hover { background: #0062a0; }
+nav a:focus-visible { outline-offset: 2px; }
+.home-layout { display: grid; grid-template-columns: minmax(0, 60%) minmax(0, 36%); gap: 4%; align-items: start; }
+#content { min-width: 0; }
+#sidebar { min-width: 0; margin-top: 38px; color: #555555; }
+#sidebar img { width: 100%; margin-bottom: 20px; }
+#sidebar p { font-size: 15px; line-height: 1.65; }
+.content-block + .content-block { margin-top: 30px; }
+.paper-group { margin-top: 24px; }
+ul.inside { list-style-position: outside; }
+ul.inside > li { margin: 0 0 17px; line-height: 1.65; }
+ul.outside > li { margin-bottom: 12px; }
+/* Preserve support for the original paper abstract popups. */
+ul.inside li a.article { position: relative; z-index: 20; color: #000000; font-style: italic; }
+ul.inside li a.article:hover { color: #008ce5; z-index: 30; }
+ul.inside li a.article span.abstract { display: none; }
+ul.inside li a.article:hover span.abstract,
+ul.inside li a.article:focus span.abstract {
   display: block;
   position: absolute;
-  font-size: 16px;
-  
-  /* This sets the height of a line of text in the box. */
-  line-height: 28px;
-
-  
-  /* These position the box where it needs to go. */
-  top: 26px; 
-  left: 0px; 
-  
-  /* These adjust the size of the box when it appears. */
+  top: 26px;
+  left: 0;
   width: 600px;
+  max-width: calc(100vw - 48px);
   padding: 10px;
-  
   border: 1px solid #666666;
-  background-color: #BFE2F8; 
-  
-  /* text color */
+  background: #BFE2F8;
   color: #000000;
+  font-size: 16px;
+  line-height: 1.65;
   text-align: left;
-  
- 
 }
-
-
-
-
-ol {margin-top: -1em; margin-left: 0px; padding-left: 20px;}
-
-/* Content area */
-#content {background:#fff; float:left; text-align:left; padding:0; margin:15px 0px 0px 0;  width:60%;}
-
-  
-#box{
-  background:#fff; float:left; text-align:left; padding:0; margin:15px 0px 0px 0;;
+.course-table { width: 100%; border-collapse: collapse; table-layout: fixed; text-align: left; }
+.course-table th, .course-table td { padding: 8px 12px 8px 0; vertical-align: top; overflow-wrap: anywhere; }
+.course-table th { font-weight: 600; }
+.course-table th:first-child, .course-table td:first-child { width: 20%; }
+.course-table th:nth-child(2), .course-table td:nth-child(2) { width: 60%; }
+.course-table th:last-child, .course-table td:last-child { width: 20%; padding-right: 0; }
+.lecture-notes { margin-top: 32px; }
+.teaching-material { margin-top: 26px; }
+.teaching-material p { margin-bottom: 10px; }
+.teaching-material .material-links { margin-bottom: 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 900px) {
+  .headwrap { width: calc(100% - 40px); gap: 20px; }
+  .wrap { width: calc(100% - 40px); max-width: 800px; }
 }
-
-#smallbox{
-  background:#fff; float:left; text-align:left; padding:0; margin:8px 0px 0px 0;;
+@media (max-width: 680px) {
+  header { position: static; height: auto; }
+  .headwrap { flex-direction: column; gap: 8px; padding: 7px 0 10px; }
+  .myname { min-width: 0; width: 100%; line-height: 34px; }
+  nav { width: 100%; }
+  nav ul { gap: 5px; font-size: 14px; }
+  nav ul li, nav ul li.dark { flex: 1 1 0; }
+  nav ul li a { line-height: 36px; padding: 0 4px; }
+  .wrap { margin-top: 28px; margin-bottom: 32px; }
+  .home-layout { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  #sidebar { margin-top: 0; max-width: 100%; }
+  #sidebar img { width: min(288px, 100%); }
+  #sidebar p { font-size: 16px; }
+  h2 { font-size: 23px; }
+  h3 { font-size: 18px; }
+  .course-table { font-size: 15px; }
 }
-
-/* Sidebar */
-#sidebar {width:36%; float:right; margin:0; padding:0; margin:50px 0px 0px 0;  color:#555;}
-
-
-
-
-
-@media screen and (max-width:900px) {
-  .mainwrap {
-    width:100%;
-  }
-  
-  .wrap{
-  	width:85%;
-  }
-  
-  .headwrap{
-  	width: 100%;
-  }
-
+@media (max-width: 480px) {
+  .headwrap, .wrap { width: calc(100% - 32px); }
+  nav ul { font-size: 13px; }
+  .course-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+  .course-table, .course-table tbody { display: block; }
+  .course-table tr { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 3px 12px; padding: 11px 0; }
+  .course-table td, .course-table td:first-child, .course-table td:nth-child(2), .course-table td:last-child { width: auto; padding: 0; }
+  .course-table td:first-child { grid-column: 1; grid-row: 1 / 3; font-size: 14px; }
+  .course-table td:nth-child(2) { grid-column: 2; grid-row: 1; }
+  .course-table td:last-child { grid-column: 2; grid-row: 2; font-size: 14px; }
 }
-
-@media screen and (max-width:479px) {
-  .section {
-    padding:15px;
-  }
-
-  .column {
-    margin-left:0 0%;
-    padding:0 0%;
-    float:none;
-  }
-
-
+@media print {
+  header { position: static; box-shadow: none; height: auto; }
+  nav { display: none; }
+  .wrap { width: 100%; margin-top: 20px; }
+  .course-table tr, ul.inside > li { break-inside: avoid; }
+}
